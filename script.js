@@ -10,7 +10,7 @@ const getData = async (url, params) => {
     const movieData = await getData("https://api.themoviedb.org/3/search/movie", {
       params: {
         api_key: "c5fef910d2ea5972567a21b1d26d52ff",
-        query: "batman",
+        query: "batman"
       }
     });
   
