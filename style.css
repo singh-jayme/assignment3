@@ -17,3 +17,7 @@ body {
     aspect-ratio: 16 / 9;
     height: 300px;
   }
+
+  div.select-film {
+    color: yellow;
+  }
