@@ -4,29 +4,33 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Jayme Singh - Assignment 3</title>
     <script src="./script.js" defer></script>
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <form>
-      <div class="select-film">
-        <label for="films">Select a film:</label>
+      <div>
+        <div class="select-film">
+          <label for="movieSelect">Please Select a film:</label>
+        </div>
+          <select name="movies" id="movieSelect">
+            <option value="493922">Hereditary</option>
+            <option value="496243">Parasite</option>
+            <option value="400617">Phantom Thread</option>
+            <option value="103">Taxi Driver</option>
+            <option value="115">The Big Lebowski</option>
+            <option value="503919">The Lightouse</option>
+            <option value="68722">The Master</option>
+            <option value="37799">The Social Network</option>
+            <option value="473033">Uncut Gems</option>
+            <option value="244786">Whiplash</option>
+          </select>
+          <br><br>
+          <button onclick="getMovies1()">Get</button>
+            <div id="datatag"></div>
       </div>
-        <select name="films" id="films">
-          <option value="493922">Hereditary</option>
-          <option value="496243">Parasite</option>
-          <option value="400617">Phantom Thread</option>
-          <option value="103">Taxi Driver</option>
-          <option value="115">The Big Lebowski</option>
-          <option value="503919">The Lightouse</option>
-          <option value="68722">The Master</option>
-          <option value="37799">The Social Network</option>
-          <option value="473033">Uncut Gems</option>
-          <option value="244786">Whiplash</option>
-        </select>
-        <br><br>
-        <input type="submit" value="Get">
     </form>
+  </body>
 </html>
