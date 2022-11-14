@@ -31,22 +31,28 @@ const getMovies1 = async () => {
 
     const trailer = extraData.data.videos.results.filter((video) => video.type === "Trailer").at(0).key;
     const h1 = document.createElement('h1');
+    const h2 = document.createElement('h2');
     const p = document.createElement('p');
     const img = document.createElement('img');
     const iframe = document.createElement('iframe');
 
     h1.innerHTML = `${movie.title} -- ${movie.release_date}`;
-    p.innerHTML = `${movie.overview} <br><br> Contains R18+ Content: ${movie.adult} <br> Popularity: ${movie.popularity} <br> Original Language: ${movie.original_language} <br> Average Rating: ${movie.vote_average} -- Based on: ${movie.vote_count} votes`;
+    h2.innerHTML = `${movie.overview}`;
+    p.innerHTML = `Runtime: ${extraData.data.runtime} minutes <br> Popularity: ${movie.popularity} <br> Average Rating: ${movie.vote_average} -- Based on: ${movie.vote_count} votes <br> Budget: $${extraData.data.budget} <br> Revenue: $${extraData.data.revenue} <br> Original Language: ${movie.original_language}`;
     img.src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`
     iframe.src = `https://www.youtube.com/embed/${trailer}`;
 
     //DOM
     movieBG.append(h1)
+    movieBG.append(h2)
     movieBG.append(p);
     movieBG.append(img);
     movieBG.append(iframe);
   }
 
+;
+
+getMovies1();
 ;
 
 getMovies1();
