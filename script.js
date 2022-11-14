@@ -53,6 +53,3 @@ const getMovies1 = async () => {
 ;
 
 getMovies1();
-;
-
-getMovies1();
