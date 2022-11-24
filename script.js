@@ -10,10 +10,10 @@ const getMovies1 = async () => {
   let movieBG= document.getElementById("movieBG");
   movieBG.innerHTML="";
   let filmSelect = document.getElementById("filmSelect")
-  const movieData = await getData ("https://api.themoviedb.org/3/search/movie", {
-  params: {
-    api_key: "8d992bf093d92b23f2529662f9291664",
-      query: filmSelect.value,
+  const movieData = await getData (`https://api.themoviedb.org/3/movie/`, {
+    params: {
+      api_key: "8d992bf093d92b23f2529662f9291664",
+        query: filmSelect.value,
     }
   });
 
